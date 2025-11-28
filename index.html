@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Course Registration</h2>
+<input id="cname" placeholder="Course Name">
+<input id="ccode" placeholder="Course Code">
+<button onclick="addCourse()">Add</button>
+<p id="courselist"></p>
+
+<h2>Calendar</h2>
+<input type="date" id="eventDate">
+<input id="eventTitle" placeholder="Event Title">
+<button onclick="addEvent()">Add Event</button>
+<p id="eventlist"></p>
+
+<script>
+function addCourse() {
+  var name = document.getElementById("cname").value;
+  var code = document.getElementById("ccode").value;
+  document.getElementById("courselist").innerHTML += name + " (" + code + ")<br>";
+}
+
+function addEvent() {
+  var d = document.getElementById("eventDate").value;
+  var t = document.getElementById("eventTitle").value;
+  document.getElementById("eventlist").innerHTML += d + " - " + t + "<br>";
+}
+</script>
+
+</body>
+</html>
